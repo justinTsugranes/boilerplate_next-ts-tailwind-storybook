@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "chromatic": "npx chromatic"
   },
   "dependencies": {
     "@heroicons/react": "^2.0.14",
@@ -38,10 +39,13 @@
     "@storybook/testing-library": "^0.0.13",
     "autoprefixer": "^10.4.13",
     "babel-loader": "^8.3.0",
+    "chromatic": "^6.15.0",
     "eslint-plugin-storybook": "^0.6.10",
     "postcss": "^8.4.21",
     "prettier": "^2.8.3",
     "prettier-plugin-tailwindcss": "^0.2.2",
     "tailwindcss": "^3.2.4"
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "nextjs-tailwind-sanity-and-storybook@0.1.0"
 }
