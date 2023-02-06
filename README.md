@@ -15,7 +15,7 @@
 
 <!-- TODO: ADD SHORT PROJECT DESCRIPTION -->
 
-This project starter is configured to use Next.js 13 with TypeScript, TailwindCSS, Sanity.io, and Storybook. Some of the additional packages include Framer-Motion, Hero Icons, Prettier, ESLint, and prettier-plugin-tailwindcss (to auto format your tailwind classes).
+This project starter is configured to use Next.js 13 with TypeScript, TailwindCSS, Sanity.io, and Storybook. Some of the additional packages include Framer-Motion, Hero Icons, Prettier, ESLint, Husky, prettier-plugin-tailwindcss (to auto format your tailwind classes), and Concurrently. The Project also contains workflows through GitHub Actions
 
 [Explore the docs][repo-url] --- [View Demo][project-url] --- [Report Bug][issues-url]
 
@@ -126,12 +126,13 @@ _I'd love to hear any feedback or just thoughts. Feel free to reach out at my co
 
 [![sanity]][sanity-url]
 
-<!-- #### DevOps -->
+#### DevOps
 
-<!-- - **CI/CD** -->
+- **CI/CD**
   <!-- [![circle-ci]][circle-ci-url] -->
   <!-- [![jenkins]][jenkins-url] -->
   <!-- [![travis-ci]][travis-ci-url] -->
+  [![github-actions]][github-actions-url]
 
 <!-- - **Containerization / Virtualization** -->
   <!-- [![docker]][docker-url] -->
@@ -164,9 +165,10 @@ _I'd love to hear any feedback or just thoughts. Feel free to reach out at my co
 <!-- [dotenv](https://www.npmjs.com/package/dotenv) -->
 <!-- [react-dotenv](https://www.npmjs.com/package/react-dotenv) -->
 
-<!-- #### Testing -->
+#### Testing
 
-<!-- [![cypress]][cypress-url] -->
+[![cypress]][cypress-url]
+
 <!-- [![jest]][jest-url] -->
 
 <!-- #### Proxy -->
@@ -505,8 +507,9 @@ Send me some [![bitcoin]][bitcoin-address] or [![ethereum]][ethereum-address] --
 
 <!-- TESTING -->
 
-<!-- [cypress]: https://img.shields.io/badge/Cypress-17202C?style=for-the-badge&logo=cypress&logoColor=white
-[cypress-url]: https://www.cypress.io/ -->
+[cypress]: https://img.shields.io/badge/Cypress-17202C?style=for-the-badge&logo=cypress&logoColor=white
+[cypress-url]: https://www.cypress.io/
+
 <!-- [jest]: https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white
 [jest-url]: https://jestjs.io/ -->
 

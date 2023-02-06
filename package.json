@@ -2,32 +2,76 @@
   "name": "nextjs-tailwind-sanity-and-storybook",
   "version": "0.1.0",
   "private": true,
+  "main": "package.json",
+  "license": "MIT",
+  "keywords": [
+    "sanity"
+  ],
   "scripts": {
-    "dev": "next dev",
+    "dev": "concurrently --kill-others 'npm run dev:next' 'npm run dev:sanity' 'npm run dev:storybook'",
+    "dev:next": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "storybook": "start-storybook -p 6006",
+    "dev:sanity": "cd sanity && npm run dev",
+    "start:sanity": "cd sanity && npm run start",
+    "build:sanity": "cd sanity && npm run build",
+    "deploy:sanity": "cd sanity && npm run deploy",
+    "sanity-deploy:graphql": "cd sanity && npm run deploy-graphql",
+    "style:lint": "eslint '**/*.{js,jsx,ts,tsx}'",
+    "lint:es": "npm run style:lint",
+    "lint:fix": "eslint --fix 'src/**/*.{js,jsx,ts,tsx}'",
+    "style:format": "prettier --write '**/*.{js,jsx,ts,tsx}'",
+    "format": "prettier --write 'src/**/*.{ts,tsx,css}' --config ./.prettierrc.js",
+    "prepare": "husky install",
+    "postinstall": "husky install",
+    "dev:storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "chromatic": "npx chromatic"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx}": [
+      "npm run lint:es -- --fix",
+      "npm run format"
+    ],
+    "**/*.{css,scss,md,html,json}": [
+      "prettier --write"
+    ],
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "npm run lint:es -- --fix",
+      "npm run format"
+    ]
   },
   "dependencies": {
     "@heroicons/react": "^2.0.14",
     "@next/font": "13.1.6",
+    "@sanity/vision": "^3.0.0",
     "@types/node": "18.11.18",
     "@types/react": "18.0.27",
     "@types/react-dom": "18.0.10",
+    "commitizen": "^4.3.0",
+    "concurrently": "^7.6.0",
     "eslint": "8.33.0",
     "eslint-config-next": "13.1.6",
     "framer-motion": "^9.0.1",
     "next": "13.1.6",
+    "next-sanity": "^4.1.2",
+    "next-sanity-image": "^5.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-is": "^18.2.0",
+    "sanity": "^3.0.0",
     "storybook-addon-next": "^1.7.1",
     "typescript": "4.9.5"
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",
+    "@sanity/eslint-config-studio": "^2.0.1",
     "@storybook/addon-actions": "^6.5.16",
     "@storybook/addon-essentials": "^6.5.16",
     "@storybook/addon-interactions": "^6.5.16",
@@ -40,12 +84,32 @@
     "autoprefixer": "^10.4.13",
     "babel-loader": "^8.3.0",
     "chromatic": "^6.15.0",
+    "cypress": "^12.5.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-storybook": "^0.6.10",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.0",
     "postcss": "^8.4.21",
     "prettier": "^2.8.3",
     "prettier-plugin-tailwindcss": "^0.2.2",
+    "semantic-release": "^20.1.0",
+    "styled-components": "^5.3.6",
     "tailwindcss": "^3.2.4"
   },
-  "readme": "ERROR: No README data found!",
-  "_id": "nextjs-tailwind-sanity-and-storybook@0.1.0"
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/changelog",
+    "@semantic-release/github",
+    "@semantic-release/npm",
+    "@semantic-release/git"
+  ],
+  "readme": "",
+  "_id": "nextjs-tailwind-sanity-and-storybook@0.1.0",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }

@@ -1,0 +1,23 @@
+{
+  "version": "0.1.0",
+  "name": "nextjs-tailwind-sanity-and-storybook",
+  "dependencies": {
+    "@heroicons/react": {"version": "2.0.14"},
+    "@next/font": {"version": "13.1.6"},
+    "@types/node": {"version": "18.11.18"},
+    "@types/react-dom": {"version": "18.0.10"},
+    "@types/react": {"version": "18.0.27"},
+    "concurrently": {"version": "7.6.0"},
+    "dotenv": {"version": "16.0.3"},
+    "eslint-config-next": {"version": "13.1.6"},
+    "eslint": {"version": "8.33.0"},
+    "framer-motion": {"version": "9.0.1"},
+    "next-sanity-image": {"version": "5.0.0"},
+    "next-sanity": {"version": "4.1.2"},
+    "next": {"version": "13.1.6"},
+    "react-dom": {"version": "18.2.0"},
+    "react": {"version": "18.2.0"},
+    "storybook-addon-next": {"version": "1.7.1"},
+    "typescript": {"version": "4.9.5"}
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "nextjs-tailwind-sanity-and-storybook",
+  "private": true,
+  "version": "1.0.0",
+  "main": "package.json",
+  "license": "MIT",
+  "scripts": {
+    "dev": "sanity dev",
+    "start": "sanity start",
+    "build": "sanity build",
+    "deploy": "sanity deploy",
+    "deploy-graphql": "sanity graphql deploy"
+  },
+  "dependencies": {
+    "styled-components": "^5.3.6"
+  }
+}
