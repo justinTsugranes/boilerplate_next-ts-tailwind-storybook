@@ -22,7 +22,7 @@
     "lint:es": "npm run style:lint",
     "lint:fix": "eslint --fix 'src/**/*.{js,jsx,ts,tsx}'",
     "style:format": "prettier --write '**/*.{js,jsx,ts,tsx}'",
-    "format": "prettier --write 'src/**/*.{ts,tsx,css}' --config ./.prettierrc.js",
+    "format": "prettier --write 'src/**/*.{ts,tsx,css}' --config ./.prettierrc",
     "prepare": "husky install",
     "postinstall": "husky install",
     "dev:storybook": "start-storybook -p 6006",
